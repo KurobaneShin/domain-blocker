@@ -5,4 +5,4 @@ run:
 	go run main.go
 
 install:
-	sudo ./domain-blocker
+	sudo bash -c './domain-blocker &'

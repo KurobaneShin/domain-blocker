@@ -50,6 +50,7 @@ func main() {
 		}
 		time.Sleep(5 * time.Minute)
 	}
+
 }
 
 func shouldBlock(domainTime DomainTime, currentHour int) bool {
