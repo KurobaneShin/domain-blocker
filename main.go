@@ -52,13 +52,11 @@ func main() {
 	}
 }
 
-// shouldBlock checks if the current hour falls within the block time for the domain
 func shouldBlock(domainTime DomainTime, currentHour int) bool {
 	shouldBlock := currentHour >= domainTime.BlockFrom && currentHour < domainTime.BlockTo
 	return shouldBlock
 }
 
-// blockDomain adds the domain to /etc/hosts to block it
 func blockDomain(domain string) {
 	hostsContent, err := os.ReadFile(hostsFile)
 	if err != nil {
